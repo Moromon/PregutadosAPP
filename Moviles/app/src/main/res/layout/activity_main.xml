@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Layout general-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
     <!--Layout donde contiene los componentes de preguntas y botones-->
@@ -67,23 +66,19 @@
     </LinearLayout>
 
 
-
     <!--Boton solucion-->
-<Button
-    android:id="@+id/restartButton"
+    <Button
+        android:id="@+id/restartButton"
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="RestartQuiz"
-    android:backgroundTint="@color/black"
-    android:layout_marginTop="35dp"
-    android:textSize="16sp"
-    android:padding="10dp"
-    android:textColor="@color/white"
-    android:enabled="false"/>
-
-
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/black"
+        android:enabled="false"
+        android:padding="10dp"
+        android:text="RestartQuiz"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
 
 </LinearLayout>
