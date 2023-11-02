@@ -5,15 +5,13 @@ import androidx.room.RoomDatabase
 import com.example.data.Question
 import com.example.data.QuestionDao
 
-/**
- * Database class with a singleton Instance object.
- */
 @Database(entities = [Question::class], version = 1, exportSchema = false)
 abstract class InventoryDatabase : RoomDatabase() {
 
     abstract fun questionDao(): QuestionDao
+    
 
-    companion object {
+    /*companion object {
         @Volatile
         private var Instance: InventoryDatabase? = null
 
@@ -25,5 +23,5 @@ abstract class InventoryDatabase : RoomDatabase() {
                     .also { Instance = it }
             }
         }
-    }
+    }*/
 }
