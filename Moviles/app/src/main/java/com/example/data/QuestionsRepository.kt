@@ -34,7 +34,7 @@ interface QuestionsRepository {
     /**
      * Insert item in the data source
      */
-    suspend fun insertItem(item: Question)
+    suspend fun insertItem(item: List<Question>)
 
     /**
      * Delete item from the data source

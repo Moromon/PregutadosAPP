@@ -16,6 +16,7 @@
 
 package com.example.data
 
+import QuestionDatabase
 import android.content.Context
 
 /**
@@ -33,6 +34,6 @@ class AppDataContainer(private val context: Context) : AppContainer {
      * Implementation for [QuestionsRepository]
      */
     override val questionsRepository: QuestionsRepository by lazy {
-        OfflineQuestionsRepository(InventoryDatabase.getDatabase(context).questionDao())
+        OfflineQuestionsRepository(QuestionDatabase.getInstance(context).questionDao())
     }
 }
