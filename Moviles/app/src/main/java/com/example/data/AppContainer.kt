@@ -26,14 +26,9 @@ interface AppContainer {
     val questionsRepository: QuestionsRepository
 }
 
-/**
- * [AppContainer] implementation that provides instance of [OfflineQuestionsRepository]
- */
 class AppDataContainer(private val context: Context) : AppContainer {
-    /**
-     * Implementation for [QuestionsRepository]
-     */
+
     override val questionsRepository: QuestionsRepository by lazy {
-        OfflineQuestionsRepository(QuestionDatabase.getInstance(context).questionDao())
+        OfflineQuestionsRepository(QuestionDatabase.getDatabase(context).questionDao())
     }
 }

@@ -22,7 +22,7 @@ class OfflineQuestionsRepository(private val questionDao: QuestionDao) : Questio
 
     override fun getItemStream(id: Int): Flow<Question?> = questionDao.getQuestion(id)
 
-    override suspend fun insertItem(item: List<Question>) = questionDao.insert(item)
+    override suspend fun insertItem(item: Question) = questionDao.insert(item)
 
     override suspend fun deleteItem(item: Question) = questionDao.delete(item)
 

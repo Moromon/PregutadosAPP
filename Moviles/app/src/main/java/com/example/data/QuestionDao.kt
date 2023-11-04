@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface QuestionDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(cquestion: List<Question>)
+    suspend fun insert(question: Question)
 
     @Update
     suspend fun update(question: Question)

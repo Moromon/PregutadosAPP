@@ -37,11 +37,19 @@ abstract class QuestionDatabase : RoomDatabase() {
                         super.onCreate(db)
                         // insert the data on the IO Thread
                         CoroutineScope(Dispatchers.IO).launch {
-                            getInstance(context).questionDao().insert(PREPOPULATE_DATA)
+                            getInstance(context).questionDao().insert(Question(0, "1+1", "1", "2", "3", "50"))
                         }
                     }
                 })
                 .build()
+
+        fun getDatabase(context: Context): QuestionDatabase {
+            // if the Instance is not null, return it, otherwise create a new database instance.
+            return INSTANCE ?: synchronized(this) {
+                Room.databaseBuilder(context, QuestionDatabase::class.java, "question_database")
+                    .build().also { INSTANCE = it }
+            }
+        }
 
         val PREPOPULATE_DATA = listOf(
             Question(0, "1+1", "1", "2", "3", "50"),

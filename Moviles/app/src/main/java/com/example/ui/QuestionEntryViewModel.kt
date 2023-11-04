@@ -28,14 +28,13 @@ class QuestionEntryViewModel(private val questionsRepository: QuestionsRepositor
             pregunta.isNotBlank() && opcion1.isNotBlank() && opcion2.isNotBlank() && opcion3.isNotBlank() && opcion4.isNotBlank()
         }
     }
-    /*
-    suspend fun saveItem() {
+
+    suspend fun saveQuestion() {
         if (validateInput()) {
             questionsRepository.insertItem(questionUIState.questionDetails.toQuestion())
         }
     }
 
-     */
 }
     data class QuestionUiState(
         val questionDetails: QuestionDetails = QuestionDetails(),
