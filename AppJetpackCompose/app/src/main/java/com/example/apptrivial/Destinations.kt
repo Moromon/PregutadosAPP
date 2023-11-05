@@ -32,6 +32,10 @@ object Quiz3:Destination {
     override val route = "Quiz3"
     override val icon = Icons.Filled.Gamepad
 }
+object Score:Destination {
+    override val route = "Score"
+    override val icon = Icons.Filled.Gamepad
+}
 
 // Screens to be displayed in the top RallyTabRow
 val tabRowScreens = listOf(Quizzes, Options)

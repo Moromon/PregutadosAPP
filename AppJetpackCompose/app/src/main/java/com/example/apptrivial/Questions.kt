@@ -11,10 +11,10 @@ data class Question(
 val questionsTema1 = listOf(
     Question("Pregunta 1", listOf("Opción 1", "Opción 1", "Opción 1","Opcion 1"), 0, ),
     Question("Pregunta 2", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 1, ),
-    Question("Pregunta 3", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 1, ),
-    Question("Pregunta 5", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 1, ),
+    Question("Pregunta 3", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 3, ),
+    Question("Pregunta 5", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 2, ),
     Question("Pregunta 7", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 1, ),
-    Question("Pregunta 21", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 1, ),
+    Question("Pregunta 21", listOf("Opción 2", "Opción 2", "Opción 2","Opcion 2"), 0, ),
 )
 
 val questionsTema2= listOf(

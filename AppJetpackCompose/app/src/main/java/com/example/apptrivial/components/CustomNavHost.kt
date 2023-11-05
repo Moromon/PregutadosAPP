@@ -3,8 +3,11 @@ package com.example.apptrivial.components
 
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontVariation
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,15 +16,19 @@ import com.example.apptrivial.Quiz1
 import com.example.apptrivial.Quiz2
 import com.example.apptrivial.Quiz3
 import com.example.apptrivial.Quizzes
+import com.example.apptrivial.Score
 import com.example.apptrivial.screens.MainScreen
 import com.example.apptrivial.screens.OptionsScreen
 import com.example.apptrivial.screens.QuestionScreen
+import com.example.apptrivial.screens.ScoreScreen
 
 @Composable
 fun CustomNavHost(
     navController: NavHostController,
     modifier: Modifier = Modifier
 ) {
+    var scoreFinal by remember { mutableStateOf(0) }
+    var timeElapsed by remember { mutableStateOf(0) }
     NavHost(
         navController = navController,
         startDestination = Quizzes.route,
@@ -44,13 +51,22 @@ fun CustomNavHost(
             OptionsScreen()
         }
         composable(route = Quiz1.route){
-            QuestionScreen(0)
+            QuestionScreen(goScoreScreen = {score,time->scoreFinal= score
+                timeElapsed = time
+                navController.navigate(Score.route){ launchSingleTop = true }},0)
         }
         composable(route = Quiz2.route){
-            QuestionScreen(1)
+            QuestionScreen(goScoreScreen = {score,time->scoreFinal= score
+                timeElapsed = time
+                navController.navigate(Score.route){ launchSingleTop = true }},1)
         }
         composable(route = Quiz3.route){
-            QuestionScreen(2)
+            QuestionScreen(goScoreScreen = {score,time->scoreFinal= score
+                timeElapsed = time
+                navController.navigate(Score.route){ launchSingleTop = true }},2)
+        }
+        composable(route = Score.route){
+            ScoreScreen(scoreFinal, timeElapsed)
         }
     }
 }
