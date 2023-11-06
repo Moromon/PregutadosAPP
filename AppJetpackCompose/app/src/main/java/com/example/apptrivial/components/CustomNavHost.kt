@@ -24,7 +24,8 @@ import com.example.apptrivial.screens.ScoreScreen
 @Composable
 fun CustomNavHost(
     navController: NavHostController,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    cMediaPlayer : CustomMediaPlayer
 ) {
     var scoreFinal by remember { mutableStateOf(0) }
     var timeElapsed by remember { mutableStateOf(0) }
@@ -52,7 +53,8 @@ fun CustomNavHost(
             OptionsScreen(nQuestions,updateData = { questions ->
                 nQuestions = questions
 
-            })
+            },updateMusic = {mutedSong -> cMediaPlayer.UpdatePreferences(mutedSong)}
+            )
         }
         composable(route = Quiz1.route) {
             QuestionScreen(goScoreScreen = { score, time ->

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,12 +30,18 @@ import com.example.apptrivial.components.RadioButton
 fun OptionsScreen(
     quantity: Int,
     updateData: (Int) -> Unit = { },
+    updateMusic: (Boolean) -> Unit = { },
+
 ) {
     var selectedQuantity by remember { mutableStateOf(quantity) }
+    var mutedSong by remember { mutableStateOf(true)}
 
-    fun onQuantitySelected(i: Int) {
+    fun OnQuantitySelected(i: Int) {
         selectedQuantity = i
         updateData(selectedQuantity)
+    }
+    fun MuteSong(){
+        updateMusic(mutedSong)
     }
 
 
@@ -56,27 +63,32 @@ fun OptionsScreen(
         ) {
             RadioButton(
                 selected = selectedQuantity == 10,
-                onClick = { onQuantitySelected(10) },
+                onClick = { OnQuantitySelected(10) },
                 text = "10"
             )
             RadioButton(
                 selected = selectedQuantity == 15,
-                onClick = { onQuantitySelected(15) },
+                onClick = { OnQuantitySelected(15) },
                 text = "15"
             )
             RadioButton(
                 selected = selectedQuantity == 20,
-                onClick = { onQuantitySelected(20) },
+                onClick = { OnQuantitySelected(20) },
                 text = "20"
             )
         }
-        Text(
-            text = "Selecciona la dificultad:",
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Bold
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text("Música")
+            Checkbox(
+                checked = mutedSong,
+                onCheckedChange = { isChecked ->
+                    mutedSong = isChecked
+                    MuteSong()
+                }
+            )
+        }
 
     }
 

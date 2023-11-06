@@ -9,7 +9,7 @@ import com.example.apptrivial.R
 class CustomMediaPlayer(var context: Context){
     val songList = listOf(R.raw.background,R.raw.background2)
     var mediaPlayer: MediaPlayer? = null
-    private var currentSongIndex: Int = 0
+    var currentSongIndex: Int = 0
 
     fun CreateStart() {
         mediaPlayer = MediaPlayer.create(context, songList[currentSongIndex])
@@ -40,6 +40,13 @@ class CustomMediaPlayer(var context: Context){
 
     fun Start() {
         mediaPlayer?.start()
+    }
+    fun UpdatePreferences(bool:Boolean){
+        if(bool){
+            Start()
+        }else{
+            Pause()
+        }
     }
 
 

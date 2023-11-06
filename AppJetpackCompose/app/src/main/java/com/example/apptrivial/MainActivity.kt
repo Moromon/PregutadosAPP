@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-           App()
+           App(customMediaPlayer)
         }
     }
     override fun onDestroy() {
@@ -55,7 +55,8 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun App() {
+fun App(customMediaPlayer: CustomMediaPlayer) {
+
     AppTrivialTheme {
         val navController = rememberNavController()
 
@@ -77,18 +78,13 @@ fun App() {
         ) { innerPadding ->
             CustomNavHost(
                 navController = navController,
-                modifier = Modifier.padding(innerPadding)
+                modifier = Modifier.padding(innerPadding),
+                cMediaPlayer = customMediaPlayer
             )
         }
     }
 }
 
-
-@Preview(showBackground = true)
-@Composable
-fun App_preview(){
-    App()
-}
 
 
 
