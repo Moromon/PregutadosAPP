@@ -1,36 +1,42 @@
 package com.example.apptrivial.components
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import androidx.compose.foundation.interaction.PressInteraction
 import com.example.apptrivial.R
 
 
-class CustomMediaPlayer(var context: Context){
-    val songList = listOf(R.raw.background,R.raw.background2)
+class CustomMediaPlayer(var context: Context, var sharedPreferences: SharedPreferences) {
+    val songList = listOf(R.raw.background, R.raw.background2)
     var mediaPlayer: MediaPlayer? = null
     var currentSongIndex: Int = 0
 
     fun CreateStart() {
         mediaPlayer = MediaPlayer.create(context, songList[currentSongIndex])
-        mediaPlayer?.start()
+        Start()
 
         mediaPlayer?.setOnCompletionListener { PlayNextSong() }
 
     }
 
     private fun PlayNextSong() {
-        if (currentSongIndex < songList.size - 1) currentSongIndex++
-        else    currentSongIndex = 0
-            loadSong(currentSongIndex)
-            mediaPlayer?.start()
+        if (currentSongIndex < songList.size - 1) {
+            currentSongIndex++
+        } else {
+            currentSongIndex = 0
+        }
+        loadSong(currentSongIndex)
+        mediaPlayer?.start()
 
     }
+
     private fun loadSong(index: Int) {
         mediaPlayer?.reset()
         mediaPlayer = MediaPlayer.create(context, songList[currentSongIndex])
     }
-    fun Release(){
+
+    fun Release() {
         mediaPlayer?.release()
     }
 
@@ -39,12 +45,16 @@ class CustomMediaPlayer(var context: Context){
     }
 
     fun Start() {
-        mediaPlayer?.start()
+       if( sharedPreferences.getBoolean("muted",true)){
+           mediaPlayer?.start()
+       }
+
     }
-    fun UpdatePreferences(bool:Boolean){
-        if(bool){
+
+    fun UpdatePreferences(bool: Boolean) {
+        if (bool) {
             Start()
-        }else{
+        } else {
             Pause()
         }
     }

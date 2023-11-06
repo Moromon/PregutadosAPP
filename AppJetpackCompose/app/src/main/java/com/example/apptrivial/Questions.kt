@@ -50,12 +50,7 @@ val questionsTema1 = listOf(
         2,
 
     ),
-    Question(
-        "¿Cuál es el juego de disparos en primera persona que se desarrolla en un mundo de ciencia ficción y presenta un soldado llamado Master Chief?",
-        listOf("Doom", "Halo", "Quake", "Half-Life"),
-        1,
 
-    ),
     Question(
         "¿En qué juego puedes construir y explorar un mundo abierto de bloques?",
         listOf("The Sims", "SimCity", "Minecraft", "RollerCoaster Tycoon"),
@@ -89,7 +84,7 @@ val questionsTema1 = listOf(
 
     ),
     Question(
-        "¿Cuál de estos juegos es una franquicia de estrategia en tiempo real (RTS) desarrollada por Blizzard Entertainment?",
+        "¿Cuál de estos juegos de estrategia en tiempo real desarrollada por Blizzard?",
         listOf("StarCraft", "Civilization", "Age of Empires", "Command & Conquer"),
         0,
 
@@ -97,8 +92,8 @@ val questionsTema1 = listOf(
     Question(
         "¿Cuál es el género de juegos de 'League of Legends'?",
         listOf(
-            "Juego de disparos en primera persona",
-            "MOBA (Arenas de batalla en línea multijugador)",
+            "FPS",
+            "MOBA",
             "Juego de carreras",
             "Juego de lucha"
         ),
@@ -135,7 +130,7 @@ val questionsTema1 = listOf(
 
     ),
     Question(
-        "¿Cuál de estos juegos se desarrolla en un mundo de fantasía y presenta personajes como orcos, elfos y dragones?",
+        "¿Qué se desarrolla en un mundo de fantasía y presenta personajes como orcos, elfos y dragones?",
         listOf(
             "Mass Effect",
             "The Legend of Zelda",
@@ -147,7 +142,7 @@ val questionsTema1 = listOf(
     ),
 
     Question(
-        "¿Cuál de estos juegos fue creado por Hideo Kojima y es conocido por su narrativa compleja y cinematográfica?",
+        "¿Cuál de estos juegos fue creado por Hideo Kojima?",
         listOf("Metal Gear Solid", "Final Fantasy VII", "The Witcher 3", "Dark Souls"),
         0,
 
@@ -160,33 +155,15 @@ val questionsTema1 = listOf(
 
     ),
     Question(
-        "¿Cuál de estos juegos se desarrolla en un mundo de ciencia ficción donde los jugadores exploran el espacio y toman decisiones morales?",
-        listOf("Mass Effect", "The Elder Scrolls: Skyrim", "Dragon Age: Origins", "The Witcher 3"),
-        0,
-
-    ),
-    Question(
         "¿En qué juego los jugadores pueden construir y gestionar su propio parque de atracciones?",
         listOf("RollerCoaster Tycoon", "Minecraft", "SimCity", "The Sims"),
         0,
 
     ),
     Question(
-        "¿Cuál de estos juegos es un título de estrategia en tiempo real (RTS) que se centra en la construcción de imperios y la gestión de recursos?",
-        listOf("Civilization", "StarCraft", "Age of Empires", "Command & Conquer"),
-        1,
-
-    ),
-    Question(
         "¿Cuál es el nombre del juego en el que los jugadores pueden diseñar y gestionar su propia ciudad?",
         listOf("SimCity", "Cities: Skylines", "Civilization", "The Sims"),
         0,
-
-    ),
-    Question(
-        "¿Cuál de estos juegos de rol (RPG) se desarrolla en un mundo de ciencia ficción y presenta un sistema de combate en tiempo real?",
-        listOf("Final Fantasy VII", "Deus Ex", "Planescape: Torment", "Dark Souls"),
-        1,
 
     ),
     Question(
@@ -201,13 +178,7 @@ val questionsTema1 = listOf(
 
     ),
     Question(
-        "¿Cuál es el juego de rol (RPG) en el que los jugadores pueden crear sus propios personajes y explorar un mundo abierto lleno de monstruos y misiones?",
-        listOf("Dark Souls", "The Elder Scrolls V: Skyrim", "The Witcher 3", "Mass Effect"),
-        1,
-
-    ),
-    Question(
-        "¿Cuál de estos juegos de disparos en primera persona se desarrolla en un mundo de ciencia ficción y presenta un arsenal de armas futuristas?",
+        "¿Cuál de estos FPS se desarrolla en un mundo de ciencia ficción y presenta un arsenal de armas futuristas?",
         listOf("Half-Life", "Bioshock", "Destiny", "Halo"),
         3,
 
@@ -250,12 +221,6 @@ val questionsTema1 = listOf(
 
     ),
 
-    Question(
-        "¿Qué juego de supervivencia multijugador se desarrolla en un mundo posapocalíptico y presenta elementos de construcción?",
-        listOf("DayZ", "PlayerUnknown's Battlegrounds", "The Forest", "Among Us"),
-        2,
-
-    ),
 
     Question(
         "En el juego 'Ghost of Tsushima', ¿cuál es el nombre del protagonista samurái?",
@@ -309,7 +274,7 @@ val questionsTema1 = listOf(
     ),
 
     Question(
-        "En el juego indie 'Hollow Knight', ¿cuál es el nombre del protagonista insecto que explora el mundo subterráneo de Hallownest?",
+        "En el juego indie 'Hollow Knight', ¿cuál es el nombre del protagonista?",
         listOf("Hornet", "Silk Song", "Knight", "Grub"),
         2,
 
@@ -328,12 +293,6 @@ val questionsTema1 = listOf(
         2,
 
     ),
-    Question(
-        "¿Cuál de los siguientes juegos independientes fue desarrollado por el estudio Mojang y se centra en la construcción y exploración en un mundo de bloques?",
-        listOf("Terraria", "Starbound", "Stardew Valley", "Minecraft"),
-        3,
-
-    ),
 
     Question(
         "En 'Celeste', un juego indie de plataformas, ¿cuál es el objetivo principal de la protagonista Madeline?",
@@ -347,12 +306,6 @@ val questionsTema1 = listOf(
 
     ),
 
-    Question(
-        "¿Cuál de los siguientes juegos independientes fue galardonado con varios premios por su narrativa emocional y gráficos pixelados?",
-        listOf("Limbo", "Oxenfree", "Hollow Knight", "Hyper Light Drifter"),
-        3,
-
-    ),
 
     Question(
         "En el juego indie 'Cuphead', ¿cuál es el nombre de los dos hermanos protagonistas que deben derrotar a jefes desafiantes?",
@@ -389,8 +342,8 @@ val questionsTema2 = listOf(
 
     ),
     Question(
-        "¿Qué consola se lanzó en 1985 y ayudó a revivir la industria de los videojuegos después de la crisis de 1983?",
-        listOf("NES (Nintendo Entertainment System)", "Atari 2600", "Sega Genesis", "PlayStation"),
+        "¿Qué consola ayudó a revivir la industria de los videojuegos después de la crisis de 1983?",
+        listOf("NES", "Atari 2600", "Sega Genesis", "PlayStation"),
         0,
 
     ),
@@ -500,7 +453,7 @@ val questionsTema2 = listOf(
         "¿Cuál de estos juegos de rol (RPG) se lanzó primero?",
         listOf(
             "Final Fantasy",
-            "Dragon Quest (Dragon Warrior)",
+            "Dragon Quest",
             "The Elder Scrolls: Arena",
             "Diablo"
         ),
@@ -518,8 +471,8 @@ val questionsTema2 = listOf(
         listOf(
             "Metal Gear Solid",
             "Metal Gear",
-            "Metal Gear 2: Solid Snake",
-            "Metal Gear Solid 3: Snake Eater"
+            "Metal Gear 2",
+            "Metal Gear Solid 3"
         ),
         1,
 
@@ -527,7 +480,7 @@ val questionsTema2 = listOf(
     Question(
         "¿Qué consola se lanzó en 1994 y popularizó los juegos en 3D?",
         listOf(
-            "Super Nintendo Entertainment System (SNES)",
+            "SNES",
             "Sega Saturn",
             "Sony PlayStation",
             "Sega Genesis (Mega Drive)"
@@ -655,9 +608,9 @@ val questionsTema3 = listOf(
     ),
 
     Question(
-        "¿Qué consola de Nintendo se lanzó en 1983 y ayudó a revivir la industria de los videojuegos después de la crisis de 1983?",
+        "¿Qué consola ayudó a revivir la industria de los videojuegos después de la crisis de 1983?",
         listOf(
-            "NES (Nintendo Entertainment System)",
+            "NES",
             "Super Nintendo (SNES)",
             "Nintendo 64",
             "GameCube"
@@ -724,16 +677,9 @@ val questionsTema3 = listOf(
     ),
 
     Question(
-        "¿Cuál de las siguientes consolas se lanzó en 1972 y es considerada como una de las primeras consolas de videojuegos en la historia?",
+        "¿Qué consola es considerada como una de las primeras consolas de videojuegos en la historia?",
         listOf("Atari 2600", "Odyssey", "ColecoVision", "Magnavox Odyssey"),
         3,
-
-    ),
-
-    Question(
-        "¿Cuál de las siguientes consolas se destacó por su capacidad de reproducción de discos láser y fue lanzada por Philips en 1991?",
-        listOf("Philips CD-i", "3DO Interactive Multiplayer", "TurboGrafx-16", "Neo Geo"),
-        0,
 
     ),
 
@@ -759,7 +705,7 @@ val questionsTema3 = listOf(
     ),
 
     Question(
-        "¿Cuál de las siguientes consolas de Sega presentaba un accesorio llamado '32X' para mejorar los gráficos y el rendimiento?",
+        "¿Cuál de las siguientes consolas tenia un accesorio llamado '32X' para mejorar los gráficos y el rendimiento?",
         listOf("Sega CD", "Sega Saturn", "Sega Genesis", "Sega Dreamcast"),
         2,
 
@@ -780,7 +726,7 @@ val questionsTema3 = listOf(
     ),
 
     Question(
-        "¿Cuál de las siguientes consolas se lanzó en 1998 y fue conocida por su capacidad de juego en línea a través de un módem?",
+        "¿Qué consola se lanzó en 1998 y fue conocida por su capacidad de juego en línea a través de un módem?",
         listOf("Nintendo 64", "Sega Dreamcast", "PlayStation 2", "Xbox"),
         1,
 
@@ -808,7 +754,7 @@ val questionsTema3 = listOf(
 
     Question(
         "¿Cuál es el juego más vendido de todos los tiempos?",
-        listOf("Minecraft", "Tetris", "Grand Theft Auto V", "Fortnite"),
+        listOf("Minecraft", "Tetris", "GTA5", "Fortnite"),
         1,
 
     ),
@@ -861,12 +807,6 @@ val questionsTema3 = listOf(
 
     ),
 
-    Question(
-        "¿Cuál de los siguientes juegos de arcade de los años 80 presentaba un personaje que saltaba sobre barriles y rescataba a una princesa?",
-        listOf("Donkey Kong", "Space Invaders", "Frogger", "Galaga"),
-        0,
-
-    ),
 
     Question(
         "En el juego 'Tetris', ¿cuál es el nombre del creador ruso que diseñó el juego?",
@@ -875,29 +815,6 @@ val questionsTema3 = listOf(
 
     ),
 
-    Question(
-        "¿Cuál fue el primer juego de la serie 'The Legend of Zelda' lanzado en 1986?",
-        listOf(
-            "The Legend of Zelda",
-            "Zelda II: The Adventure of Link",
-            "The Legend of Zelda: A Link to the Past",
-            "The Legend of Zelda: Ocarina of Time"
-        ),
-        0,
-
-    ),
-
-    Question(
-        "En 'Space Invaders', ¿cuál es el objetivo del jugador?",
-        listOf(
-            "Disparar a alienígenas invasores",
-            "Conducir un vehículo espacial",
-            "Construir una base lunar",
-            "Evitar asteroides"
-        ),
-        0,
-
-    ),
 
     Question(
         "¿Cuál de los siguientes juegos de arcade se caracterizaba por su laberinto y un personaje llamado 'Pac-Man'?",
@@ -914,17 +831,10 @@ val questionsTema3 = listOf(
     ),
 
     Question(
-        "¿Cuál de los siguientes juegos de arcade es conocido por su personaje titular que come puntos y es perseguido por fantasmas?",
-        listOf("Ms. Pac-Man", "Asteroids", "Centipede", "Donkey Kong"),
-        0,
-
-    ),
-
-    Question(
         "En el juego 'Frogger', ¿cuál es el objetivo del jugador?",
         listOf(
             "Nadar en un río",
-            "Saltar entre troncos y vehículos",
+            "Saltar troncos y vehículos",
             "Escapar de una cueva",
             "Construir una ciudad"
         ),
@@ -932,10 +842,4 @@ val questionsTema3 = listOf(
 
     ),
 
-    Question(
-        "¿Cuál de los siguientes juegos de arcade presentaba naves espaciales en formación que se movían hacia abajo y disparaban a la nave del jugador?",
-        listOf("Pong", "Asteroids", "Galaga", "Pac-Man"),
-        2,
-
-    ),
 )

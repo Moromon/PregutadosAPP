@@ -1,6 +1,9 @@
 package com.example.apptrivial
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.media.MediaPlayer
+import android.media.RouteDiscoveryPreference
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -23,17 +26,22 @@ import com.example.apptrivial.components.CustomNavHost
 import com.example.apptrivial.components.CustomTabRow
 
 
+
 class MainActivity : ComponentActivity() {
 
-    val customMediaPlayer: CustomMediaPlayer =  CustomMediaPlayer(this)
+    private lateinit var customMediaPlayer: CustomMediaPlayer
+    private lateinit var sharedPreferences: SharedPreferences
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        sharedPreferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE)
+        customMediaPlayer =   CustomMediaPlayer(this,sharedPreferences)
         customMediaPlayer.CreateStart()
 
 
         setContent {
-           App(customMediaPlayer)
+           App(customMediaPlayer,sharedPreferences)
         }
     }
     override fun onDestroy() {
@@ -55,7 +63,7 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun App(customMediaPlayer: CustomMediaPlayer) {
+fun App(customMediaPlayer: CustomMediaPlayer, sharedPreference: SharedPreferences) {
 
     AppTrivialTheme {
         val navController = rememberNavController()
@@ -79,7 +87,8 @@ fun App(customMediaPlayer: CustomMediaPlayer) {
             CustomNavHost(
                 navController = navController,
                 modifier = Modifier.padding(innerPadding),
-                cMediaPlayer = customMediaPlayer
+                cMediaPlayer = customMediaPlayer,
+                sharedPreferences = sharedPreference
             )
         }
     }

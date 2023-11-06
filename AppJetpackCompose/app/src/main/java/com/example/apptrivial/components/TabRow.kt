@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
@@ -41,6 +42,7 @@ fun CustomTabRow(
 ) {
     Surface(
         Modifier
+            .size(0.dp)
             .height(TabHeight)
             .fillMaxWidth()
     ) {
@@ -79,7 +81,7 @@ private fun CustomTab(
     )
     Row(
         modifier = Modifier
-            .padding(16.dp)
+            .size(0.dp)
             .animateContentSize()
             .height(TabHeight)
             .selectable(
