@@ -14,14 +14,20 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ScoreScreen(
     scoreFinal: Int,
-    timeElapsed: Int
+    timeElapsed: Int,
+    toMainMenu:()-> Unit = {}
 
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text("$scoreFinal")
-        Text("$timeElapsed")
+        Text( "Has acertado $scoreFinal preguntas")
+        Text( "Has tardado $timeElapsed segundos")
+        Text("Tu puntuación final es de "+(scoreFinal*1000)/timeElapsed+" puntos")
+
+        Button(onClick = { toMainMenu() }) {
+            Text("Volver al menu")
+        }
     }
 }

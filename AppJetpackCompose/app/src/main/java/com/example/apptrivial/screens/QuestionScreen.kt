@@ -37,7 +37,9 @@ import java.util.TimerTask
 @Composable
 fun QuestionScreen(
     goScoreScreen: (Int,Int) -> Unit = {_, _ ->},
-    indx: Int
+    indx: Int,
+    nQuestion: Int,
+
 ) {
     var questions = listOf<Question>()
     if (indx == 0) questions = questionsTema1
@@ -46,7 +48,8 @@ fun QuestionScreen(
 
     var progress by remember { mutableStateOf(0f) }
 
-    var maxQuestions = questions.count()
+    var maxQuestions = remember { mutableStateOf(0) }
+    maxQuestions.value = nQuestion
 
     var questionIndx by remember { mutableStateOf(0) }
     var score by remember { mutableStateOf(0) }
@@ -74,7 +77,7 @@ fun QuestionScreen(
     var elapsedTime by remember { mutableStateOf(0L) }
 
     fun CalculateProgress() {
-        progress = (questionIndx.toFloat() / maxQuestions.toFloat())
+        progress = (questionIndx.toFloat() / maxQuestions.value.toFloat())
     }
 
     fun StartQuiz() {
@@ -101,11 +104,9 @@ fun QuestionScreen(
 
     fun WaitNextQuestion(){
         handler.postDelayed({ NextQuestion() }, 2000)
-
     }
 
     fun ShowAnswers(indx: Int) {
-
         buttonColor1.value = Color.Red
         buttonColor2.value = Color.Red
         buttonColor3.value = Color.Red
@@ -136,7 +137,7 @@ fun QuestionScreen(
 
         questionIndx++
         CalculateProgress()
-        lastQuestion = if(maxQuestions <= questionIndx) true else false
+        lastQuestion = if(maxQuestions.value <= questionIndx) true else false
         if(!lastQuestion) WaitNextQuestion()
         else{
             goScoreScreen(score,elapsedTime.toInt()/1000)
@@ -156,7 +157,7 @@ fun QuestionScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         ) {
         Text("Tiempo: ${formatElapsedTime(elapsedTime)}")
-        Text("$questionIndx/$maxQuestions")
+        Text("$questionIndx/${maxQuestions.value}")
         LinearProgressIndicator(
             progress = progress,
             modifier = Modifier
