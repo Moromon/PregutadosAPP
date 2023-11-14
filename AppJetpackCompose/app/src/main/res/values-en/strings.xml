@@ -8,4 +8,7 @@
     <string name="optionsMusic">Music</string>
     <string name="optionsMenu">Main Menu</string>
     <string name="questionTime">Time:</string>
+    <string name="scoreQuestions">Correct answers</string>
+    <string name="scoreTime">Time used:</string>
+    <string name="scorePoints">Final score:</string>
 </resources>

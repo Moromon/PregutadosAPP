@@ -10,6 +10,6 @@
     <string name="questionTime">Tiempo:</string>
     <string name="scoreQuestions">Preguntas acertadas:</string>
     <string name="scoreTime">Tiempo empleado:</string>
-    <string name="scorePoints">Tiempo empleado:</string>
+    <string name="scorePoints">Puntuación final</string>
 
 </resources>
