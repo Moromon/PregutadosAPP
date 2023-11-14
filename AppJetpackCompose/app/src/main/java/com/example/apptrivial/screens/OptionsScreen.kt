@@ -84,7 +84,7 @@ fun OptionsScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
-            text = "Selecciona la cantidad de preguntas:",
+            text = context.getString(R.string.optionsQuestions),
             fontSize = 14.sp,
             color = Color.White,
             fontWeight = FontWeight.Bold,
@@ -117,7 +117,7 @@ fun OptionsScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                "Música",
+                context.getString(R.string.optionsMusic),
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp,
@@ -142,7 +142,7 @@ fun OptionsScreen(
 
                 .fillMaxWidth()
                 .size(0.dp, 50.dp)
-        ) { Text("Menú Principal", style = TextStyle(fontSize = 20.sp)) }
+        ) { Text(context.getString(R.string.optionsMenu), style = TextStyle(fontSize = 20.sp)) }
     }
 
 

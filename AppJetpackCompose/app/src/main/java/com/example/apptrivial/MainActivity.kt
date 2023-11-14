@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPreferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE)
-        customMediaPlayer =   CustomMediaPlayer(this,sharedPreferences)
+        customMediaPlayer = CustomMediaPlayer(this,sharedPreferences)
         customMediaPlayer.CreateStart()
 
 

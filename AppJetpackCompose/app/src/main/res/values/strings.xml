@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">AppTrivial</string>
+    <string name="app_name" translatable="false">AppTrivial</string>
+    <string name="quizzGame1">Conocimiento General</string>
+    <string name="quizzGame2">Historia de los videojuegos</string>
+    <string name="quizzGame3">Historia de las consolas</string>
+    <string name="options">Opciones</string>
+    <string name="optionsQuestions">Selecciona la cantidad de preguntas:</string>
+    <string name="optionsMusic">Música</string>
+    <string name="optionsMenu">Menú Principal</string>
+    <string name="questionTime">Tiempo:</string>
+    <string name="scoreQuestions">Preguntas acertadas:</string>
+    <string name="scoreTime">Tiempo empleado:</string>
+    <string name="scorePoints">Tiempo empleado:</string>
+
 </resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quizzGame2">History of video games</string>
+    <string name="quizzGame3">History of consoles</string>
+    <string name="quizzGame1">General knowledge</string>
+    <string name="options">Settings</string>
+    <string name="optionsQuestions">Select the number of questions:</string>
+    <string name="optionsMusic">Music</string>
+    <string name="optionsMenu">Main Menu</string>
+    <string name="questionTime">Time:</string>
+</resources>

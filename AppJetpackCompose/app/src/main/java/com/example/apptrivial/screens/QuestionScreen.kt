@@ -35,6 +35,7 @@ import androidx.compose.runtime.MutableState
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -54,6 +55,7 @@ fun QuestionScreen(
     nQuestion: Int,
 
     ) {
+    val context = LocalContext.current
     var questions =  listOf<Question>()
     if (indx == 0) questions = questionsTema1
     if (indx == 1) questions = questionsTema2
@@ -186,7 +188,7 @@ fun QuestionScreen(
 
         ) {
         Text(
-            "Tiempo: ${formatElapsedTime(elapsedTime)}", color = Color.White,
+            context.getString(R.string.questionTime)+" ${formatElapsedTime(elapsedTime)}", color = Color.White,
             fontWeight = FontWeight.Bold,
             fontSize = 18.sp,
         )
